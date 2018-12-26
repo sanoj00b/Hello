@@ -57,6 +57,7 @@
 		B1E17AEB21D0BE29004A1127 = {
 			isa = PBXGroup;
 			children = (
+				B1E17B4F21D372DC004A1127 /* .travis.yml.strings */,
 				B1E17AF721D0BE29004A1127 /* Hello */,
 				B1E17B0221D0BE29004A1127 /* HelloTests */,
 				B1E17AF621D0BE29004A1127 /* Products */,
@@ -76,7 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				B1E17AF821D0BE29004A1127 /* Hello.h */,
-				B1E17B4F21D372DC004A1127 /* .travis.yml.strings */,
 				B1E17AF921D0BE29004A1127 /* Info.plist */,
 				B1E17B0F21D0C006004A1127 /* PrintHello.swift */,
 			);
