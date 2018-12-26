@@ -11,7 +11,6 @@
 		B1E17B0421D0BE29004A1127 /* HelloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E17B0321D0BE29004A1127 /* HelloTests.swift */; };
 		B1E17B0621D0BE29004A1127 /* Hello.h in Headers */ = {isa = PBXBuildFile; fileRef = B1E17AF821D0BE29004A1127 /* Hello.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1E17B1021D0C006004A1127 /* PrintHello.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E17B0F21D0C006004A1127 /* PrintHello.swift */; };
-		B1E17B5021D372DD004A1127 /* .travis.yml.strings in Resources */ = {isa = PBXBuildFile; fileRef = B1E17B4F21D372DC004A1127 /* .travis.yml.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +31,6 @@
 		B1E17B0321D0BE29004A1127 /* HelloTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloTests.swift; sourceTree = "<group>"; };
 		B1E17B0521D0BE29004A1127 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1E17B0F21D0C006004A1127 /* PrintHello.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintHello.swift; sourceTree = "<group>"; };
-		B1E17B4F21D372DC004A1127 /* .travis.yml.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = .travis.yml.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +55,6 @@
 		B1E17AEB21D0BE29004A1127 = {
 			isa = PBXGroup;
 			children = (
-				B1E17B4F21D372DC004A1127 /* .travis.yml.strings */,
 				B1E17AF721D0BE29004A1127 /* Hello */,
 				B1E17B0221D0BE29004A1127 /* HelloTests */,
 				B1E17AF621D0BE29004A1127 /* Products */,
@@ -184,7 +181,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1E17B5021D372DD004A1127 /* .travis.yml.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
