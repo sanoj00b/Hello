@@ -1,0 +1,30 @@
+os: osx
+
+language: swift
+osx_image: xcode
+
+env:
+global:
+- FRAMEWORK_NAME=Hello
+
+before_install:
+- brew update
+- brew outdated carthage || brew upgrade carthage
+
+script:
+- set -o pipefail && xcodebuild -project Hello.xcodeproj -scheme $FRAMEWORK_NAME -sdk iphonesimulator11.0 -configuration Release
+- pod lib lint --quick
+
+before_deploy:
+- carthage build --no-skip-current
+- carthage archive $FRAMEWORK_NAME
+
+deploy:
+provider: releases
+api_key:
+secure: AAAAB3NzaC1yc2EAAAADAQABAAACAQDDBSBy9GzPUEu6xSEb1YY9+k5myeOxpsM1Kc+7P1AiUZdJHyySWe8ILp5VxNoSb9GNPHHUFO+XFDpRLu3mjjOTzzz4KobNCj27ifFz1zB3brMIMlAMu44ZRDG6DMbMbflGf6S6hXppmlMtMorrZhe9xXsVDPjS8k00P/65+ZVrQJv6eMgQua/IrvgDkYS4iLnxJefiT9PY0upXvbqJKk0pyQYS4H7kJ6HE62lPJMaQbA3iErqbFz6cIV3QtRFpdiZQ7vvc8WSDok8v3j4ZUlPVm/bRUZpcjasNWkxoV3UKAnWivLKbQ5X9ZW1lmONmbklYnr/kb1iV7hC4z+x4/HdbxwzlLNC4C0dGcx+tlxOVYVUKHtWjHjTWC83bm8f/ytxtsM0gJVRKG4mAGz3CgwFRY8q6lIRsIaVNd3Nv+zOm+flrbxZH+W9b1AbLq/8PLcw9OwiLgG2Nfy5B7a33oMkHAe93MI+l07Hu6fYiQ4f0UlwC82Ntw1thcPkkfk/mk5NRpCtIQDZHyPh+++CQmv44b5/OBXrEKVtX/LHfE3da3bvXVxFoevxyFxOnQ131cf/t0PMc6HScUc11Jz9m0UNOgphAyi7U25xGE9oWYs7wjKPXdodJISwu3LjpQgPBpPXmcbmxGm6DGsq9gocN5XaS7kBwABZHBrW8pQHsG9xPkw== sanoj@bluejeans.com
+file: $FRAMEWORK_NAME.framework.zip
+skip_cleanup: true
+on:
+repo: sanojbluejeans/Hello
+tags: true
