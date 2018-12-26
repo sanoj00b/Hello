@@ -26,5 +26,5 @@ secure: AAAAB3NzaC1yc2EAAAADAQABAAACAQDDBSBy9GzPUEu6xSEb1YY9+k5myeOxpsM1Kc+7P1Ai
 file: $FRAMEWORK_NAME.framework.zip
 skip_cleanup: true
 on:
-repo: sanojbluejeans/Hello
+repo: https://github.com/sanojbluejeans/Hello.git
 tags: true
