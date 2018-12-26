@@ -10,6 +10,8 @@
 		B1E17AFF21D0BE29004A1127 /* Hello.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1E17AF521D0BE29004A1127 /* Hello.framework */; };
 		B1E17B0421D0BE29004A1127 /* HelloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E17B0321D0BE29004A1127 /* HelloTests.swift */; };
 		B1E17B0621D0BE29004A1127 /* Hello.h in Headers */ = {isa = PBXBuildFile; fileRef = B1E17AF821D0BE29004A1127 /* Hello.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B1E17B1021D0C006004A1127 /* PrintHello.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E17B0F21D0C006004A1127 /* PrintHello.swift */; };
+		B1E17B5021D372DD004A1127 /* .travis.yml.strings in Resources */ = {isa = PBXBuildFile; fileRef = B1E17B4F21D372DC004A1127 /* .travis.yml.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		B1E17AFE21D0BE29004A1127 /* HelloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1E17B0321D0BE29004A1127 /* HelloTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloTests.swift; sourceTree = "<group>"; };
 		B1E17B0521D0BE29004A1127 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1E17B0F21D0C006004A1127 /* PrintHello.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintHello.swift; sourceTree = "<group>"; };
+		B1E17B4F21D372DC004A1127 /* .travis.yml.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = .travis.yml.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +76,9 @@
 			isa = PBXGroup;
 			children = (
 				B1E17AF821D0BE29004A1127 /* Hello.h */,
+				B1E17B4F21D372DC004A1127 /* .travis.yml.strings */,
 				B1E17AF921D0BE29004A1127 /* Info.plist */,
+				B1E17B0F21D0C006004A1127 /* PrintHello.swift */,
 			);
 			path = Hello;
 			sourceTree = "<group>";
@@ -148,6 +154,7 @@
 				TargetAttributes = {
 					B1E17AF421D0BE29004A1127 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					B1E17AFD21D0BE29004A1127 = {
 						CreatedOnToolsVersion = 10.1;
@@ -177,6 +184,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1E17B5021D372DD004A1127 /* .travis.yml.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1E17B1021D0C006004A1127 /* PrintHello.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +350,7 @@
 		B1E17B0A21D0BE29004A1127 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -357,6 +367,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bluejeans.hello.Hello;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +376,7 @@
 		B1E17B0B21D0BE29004A1127 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -389,6 +401,7 @@
 		B1E17B0D21D0BE29004A1127 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HelloTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,6 +419,7 @@
 		B1E17B0E21D0BE29004A1127 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HelloTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
